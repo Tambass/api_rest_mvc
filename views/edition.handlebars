@@ -1,0 +1,36 @@
+<section class="section">
+    <div class="container is-fullhd">
+        <form action="/edition/{{_id}}?_method=PUT" method="POST">
+            <div class="field">
+                <label class="label">Titre de l'article</label>
+                <div class="control">
+                    <input type="text" class="input" name="title" value="{{title}}">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Contenu</label>
+                <div class="control">
+                    <textarea class="textarea" name="content">{{content}}</textarea>
+                    <script>
+                        CKEDITOR.replace('content');
+                        CKEDITOR.config.uiColor = '#14B8C4';
+                    </script>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Auteur</label>
+                <div class="control">
+                    <input type="text" class="input" name="author" value="{{author}}">
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link">Enregistrer</button>
+                </div>
+                <div class="control">
+                    <button class="button is-text">Annuler</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

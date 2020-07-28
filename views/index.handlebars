@@ -1,0 +1,244 @@
+<!-- .section Intro -->
+<section class="section intro">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <div class="content intro-text">
+                    <h1 class="title">Pour que le virtuel devienne réalité.</h1>
+                    <p class="is-size-5">
+                        Une Entreprise de Service Numérique dédiée à l’innovation, à la formation et au développement de
+                        la culture numérique.
+                        <br><span style="text-decoration: underline; font-size: 0.9em"> La société regroupe 4 marques :
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <div class="intro"><img src="resources/images/intro.png" alt="banniere">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+
+<!-- .actualité -->
+<section class="section">
+    <div class="container">
+        <div class="columns">
+
+            {{#each posts}}
+            <div class="column">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="{{image}}" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <a href="/articles/{{_id}}">
+                                <h2>{{title}}</h2>
+                            </a>
+                            <p>{{{content}}}</p>
+                            <p>Publié par {{author}}, le {{createDate}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="list" id="list"></div>
+        <div class="pagenumbers" id="pagination"></div>
+    </div>
+</section>
+
+
+<!-- .section -->
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <article class="media notification bgimage animation" style="background-image:
+          linear-gradient(rgba(255,172,252,0.8),
+          rgba(255,170, 0,0.6)
+          ),
+          url(resources/images/arinfo.webp)">
+
+                    <div class="media-content">
+                        <div class="content">
+                            <h1 class="title is-size-3">Arinfo</h1>
+                            <p class="is-size-5">
+                                Le pôle formation continue et apprentissage dédié aux métiers de l’architecture et du
+                                bâtiment, de l’infographie et du design, du web et du numérique. Nos formations sont
+                                diplômantes (titres professionnels RNCP) ou certifiantes (TOSA, PCIE).
+                            </p>
+                            <a href="http://www.arinfo.fr" target="_blank" rel="noopener">Découvrir →</a>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="column">
+                <article class="media notification is-link animation">
+
+                    <div class="media-content">
+                        <div class="content">
+                            <h1 class="title is-size-3">OpenSpace3D</h1>
+                            <p class="is-size-5">
+                                Le pôle Recherche et Développement dans les domaines de la Réalité virtuelle et de la
+                                Réalité Augmentée.
+                            </p>
+                            <a href="http://www.openspace3d.com/" target="_blank" rel="noopener"
+                                title="openspace3D">Découvrir →</a>
+
+                            <div class="screenshot">
+                                <img src="resources/images/openspace3d.png" alt="openspace 3D">
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="column">
+                <article class="media notification is-warning animation">
+
+                    <div class="media-content">
+                        <div class="content">
+                            <h1 class="title is-size-3">Formao</h1>
+                            <p class="is-size-5">
+                                Notre plateforme de formation à distance tutorée permettant une individualisation des
+                                parcours, une progression au rythme de chacun, un accompagnement individualisé par nos
+                                formateurs.
+                            </p>
+                            <a href="https://cours.formao.fr" target="_blank" rel="noopener">Découvrir →</a>
+
+                            <div class="screenshot">
+                                <img src="resources/images/formao.png" alt="formao">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="column">
+                <article class="media notification bgimage animation" style="background-image:
+        linear-gradient(rgba(0,242,96,0.7),
+        rgba(0,242,96,0.7)
+        ), url(resources/images/imaginelab.webp)">
+                    <div class="media-content">
+                        <div class="content">
+                            <h1 class="title is-size-3">I-magineLab</h1>
+                            <p class="is-size-5">
+                                Nouveau lieu dans le 17ème arrondissement de Paris qui propose aux jeunes de 6 à 16 ans
+                                de se former au numérique de manière créative et éclairée.
+                            </p>
+                            <a href="noreferrer" target="_blank" title="openspace3D">Découvrir →</a>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{!-- <script>
+    const list_items = [
+        "Item 1",
+        "Item 2",
+        "Item 3",
+        "Item 4",
+        "Item 5",
+        "Item 6",
+        "Item 7",
+        "Item 8",
+        "Item 9",
+        "Item 10",
+        "Item 11",
+        "Item 12",
+        "Item 13",
+        "Item 14",
+        "Item 15",
+        "Item 16",
+        "Item 17",
+        "Item 18",
+        "Item 19",
+        "Item 20",
+        "Item 21",
+        "Item 22"
+    ];
+
+    const list_element = document.getElementById('list');
+    const pagination_element = document.getElementById('pagination');
+
+    let current_page = 1;
+    let rows = 5;
+
+    function DisplayList(items, wrapper, rows_per_page, page) {
+        wrapper.innerHTML = "";
+        page--;
+
+        let start = rows_per_page * page;
+        let end = start + rows_per_page;
+        let paginatedItems = items.slice(start, end);
+
+        for (let i = 0; i < paginatedItems.length; i++) {
+            let item = paginatedItems[i];
+
+            let item_element = document.createElement('div');
+            item_element.classList.add('item');
+            item_element.innerText = item;
+
+            wrapper.appendChild(item_element);
+        }
+    }
+
+    function SetupPagination(items, wrapper, rows_per_page) {
+        wrapper.innerHTML = "";
+
+        let page_count = Math.ceil(items.length / rows_per_page);
+        for (let i = 1; i < page_count + 1; i++) {
+            let btn = PaginationButton(i, items);
+            wrapper.appendChild(btn);
+        }
+    }
+
+    function PaginationButton(page, items) {
+        let button = document.createElement('button');
+        button.innerText = page;
+
+        if (current_page == page) button.classList.add('active');
+
+        button.addEventListener('click', function () {
+            current_page = page;
+            DisplayList(items, list_element, rows, current_page);
+
+            let current_btn = document.querySelector('.pagenumbers button.active');
+            current_btn.classList.remove('active');
+
+            button.classList.add('active');
+        });
+
+        return button;
+    }
+
+    DisplayList(list_items, list_element, rows, current_page);
+    SetupPagination(list_items, pagination_element, rows);
+</script> --}}
